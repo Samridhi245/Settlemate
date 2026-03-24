@@ -1,0 +1,2 @@
+javac -d out (Get-ChildItem -Recurse -Filter *.java -Path src | ForEach-Object { $_.FullName })
+java -cp out Main

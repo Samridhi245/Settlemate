@@ -1,0 +1,12 @@
+SETTLEMATE_TXT_V3
+USER|USR-6c19d801|aa|aa@gmail.com
+USER|USR-e7f0baa7|aa|aa@gmail.com
+USER|USR-f5374f0e|aabish|aa@gmail.com
+USER|USR-63e06ce5|Samridhi|sam@1
+USER|USR-7400d3e3|aa|aa@gmail.com
+GROUP|GRP-84fd5991|food||
+GROUP|GRP-a55cf2d6|food||
+GROUP|GRP-c7aa7c4f|food||
+GROUP|GRP-04038f29|food||
+GROUP|GRP-e1e5bf53|abcd||
+BUDGET|BDG-a8c9e7f7|USR-63e06ce5|Custom|WEEKLY|300.0
