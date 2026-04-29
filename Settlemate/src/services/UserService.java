@@ -20,8 +20,20 @@ public class UserService {
         InputValidator.requireNonBlank(name, "Name");
         InputValidator.requireEmail(email);
 
+<<<<<<< HEAD
         String userId = IdGenerator.generateId("USR");
         User user = new User(userId, name.trim(), email.trim());
+=======
+        String trimmedName = name.trim();
+        for (User existing : appData.getUsers().values()) {
+            if (existing.getName().equalsIgnoreCase(trimmedName)) {
+                throw new IllegalArgumentException("A user with this name already exists.");
+            }
+        }
+
+        String userId = IdGenerator.generateId("USR");
+        User user = new User(userId, trimmedName, email.trim());
+>>>>>>> 4b7c522 (Initial commit)
         appData.getUsers().put(userId, user);
         return user;
     }

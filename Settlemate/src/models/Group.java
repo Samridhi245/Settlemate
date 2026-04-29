@@ -41,11 +41,15 @@ public class Group implements Serializable {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return "Group{" +
                 "groupId='" + groupId + '\'' +
                 ", groupName='" + groupName + '\'' +
                 ", members=" + memberUserIds.size() +
                 ", expenses=" + expenseIds.size() +
                 '}';
+=======
+        return groupName;
+>>>>>>> 4b7c522 (Initial commit)
     }
 }

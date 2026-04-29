@@ -38,11 +38,15 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return "User{" +
                 "userId='" + userId + '\'' +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+=======
+        return name;
+>>>>>>> 4b7c522 (Initial commit)
     }
 
     @Override

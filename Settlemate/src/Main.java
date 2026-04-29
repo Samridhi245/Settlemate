@@ -123,7 +123,12 @@ public class Main {
         }
     }
 
+<<<<<<< HEAD
     private static void handleGroupManagement(Scanner scanner, GroupService groupService, UserService userService) throws UserNotFoundException {
+=======
+    private static void handleGroupManagement(Scanner scanner, GroupService groupService, UserService userService)
+            throws UserNotFoundException {
+>>>>>>> 4b7c522 (Initial commit)
         System.out.println("\n1. Create Group");
         System.out.println("2. Add Member");
         System.out.println("3. Remove Member");
@@ -164,9 +169,15 @@ public class Main {
     }
 
     private static void handleExpenseManagement(Scanner scanner,
+<<<<<<< HEAD
                                                 ExpenseService expenseService,
                                                 GroupService groupService,
                                                 UserService userService) throws InvalidSplitException, InsufficientMembersException, UserNotFoundException {
+=======
+            ExpenseService expenseService,
+            GroupService groupService,
+            UserService userService) throws InvalidSplitException, InsufficientMembersException, UserNotFoundException {
+>>>>>>> 4b7c522 (Initial commit)
         System.out.println("\n1. Add Expense");
         System.out.println("2. View Expenses by Group");
         System.out.print("Enter choice: ");
@@ -216,7 +227,12 @@ public class Main {
                 }
             }
 
+<<<<<<< HEAD
             Expense expense = expenseService.addExpense(groupId, description, amount, paidBy, splitType, details, category, date);
+=======
+            Expense expense = expenseService.addExpense(groupId, description, amount, paidBy, splitType, details,
+                    category, date);
+>>>>>>> 4b7c522 (Initial commit)
             System.out.println("Expense added: " + expense);
         } else if ("2".equals(c)) {
             String groupId = resolveGroupIdInput(scanner, "Group ID or Name", groupService);
@@ -231,7 +247,12 @@ public class Main {
         }
     }
 
+<<<<<<< HEAD
     private static void handleBalances(Scanner scanner, SettlementService settlementService, UserService userService, GroupService groupService) {
+=======
+    private static void handleBalances(Scanner scanner, SettlementService settlementService, UserService userService,
+            GroupService groupService) {
+>>>>>>> 4b7c522 (Initial commit)
         String groupId = resolveGroupIdInput(scanner, "Group ID or Name", groupService);
         Map<String, Double> balances = settlementService.calculateNetBalances(groupId);
         System.out.println("Net Balances:");
@@ -250,10 +271,19 @@ public class Main {
             System.out.println("No settlements needed.");
         } else {
             for (SettlementTransaction t : txns) {
+<<<<<<< HEAD
                 System.out.println("- " + t.getFromUserId() + " pays " + t.getToUserId() + " : " + String.format("%.2f", t.getAmount()));
             }
         }
         System.out.println("Financial Fairness Index: " + String.format("%.2f", settlementService.calculateFinancialFairnessIndex(groupId)));
+=======
+                System.out.println("- " + t.getFromUserId() + " pays " + t.getToUserId() + " : "
+                        + String.format("%.2f", t.getAmount()));
+            }
+        }
+        System.out.println("Financial Fairness Index: "
+                + String.format("%.2f", settlementService.calculateFinancialFairnessIndex(groupId)));
+>>>>>>> 4b7c522 (Initial commit)
     }
 
     private static void handleBudgetManagement(Scanner scanner, BudgetService budgetService, UserService userService) {
@@ -309,7 +339,12 @@ public class Main {
         for (User user : userService.getAllUsers()) {
             if (user.getName().equalsIgnoreCase(rawInput)) {
                 if (matched != null) {
+<<<<<<< HEAD
                     throw new IllegalArgumentException("Multiple users found with name '" + rawInput + "'. Please enter User ID.");
+=======
+                    throw new IllegalArgumentException(
+                            "Multiple users found with name '" + rawInput + "'. Please enter User ID.");
+>>>>>>> 4b7c522 (Initial commit)
                 }
                 matched = user;
             }

@@ -1,4 +1,5 @@
 SETTLEMATE_TXT_V3
+<<<<<<< HEAD
 USER|USR-6c19d801|aa|aa@gmail.com
 USER|USR-e7f0baa7|aa|aa@gmail.com
 USER|USR-f5374f0e|aabish|aa@gmail.com
@@ -10,3 +11,20 @@ GROUP|GRP-c7aa7c4f|food||
 GROUP|GRP-04038f29|food||
 GROUP|GRP-e1e5bf53|abcd||
 BUDGET|BDG-a8c9e7f7|USR-63e06ce5|Custom|WEEKLY|300.0
+=======
+USER|USR-f53e746d|ab|ab@gh1
+USER|USR-8ae8b889|aabish|aabish@gmail.com
+USER|USR-9e19ac74|shivansh|shivansh@gmail.com
+GROUP|GRP-e3f28136|bill|USR-8ae8b889,USR-f53e746d,USR-9e19ac74|EXP-554e50e4,SYN-c00f102f,SYN-3b5bb742,SYN-10f87f76,SYN-a94c6435,SYN-9125da38,SYN-94e60014,SYN-cac21a35,SYN-145fc394,SYN-5da02797
+EXPENSE|SYN-3b5bb742|GRP-e3f28136|Settlement\d ab -> aabish|1200.0|USR-8ae8b889|EXACT|Settlement|2026-04-29|USR-f53e746d:1200.0
+EXPENSE|SYN-10f87f76|GRP-e3f28136|Settlement\d shivansh -> aabish|700.0|USR-8ae8b889|EXACT|Settlement|2026-04-29|USR-9e19ac74:700.0
+EXPENSE|SYN-9125da38|GRP-e3f28136|Settlement\d ab -> aabish|4000.0|USR-8ae8b889|EXACT|Settlement|2026-04-29|USR-f53e746d:4000.0
+EXPENSE|SYN-c00f102f|GRP-e3f28136|Settlement\d ab -> aabish|500.0|USR-8ae8b889|EXACT|Settlement|2026-04-29|USR-f53e746d:500.0
+EXPENSE|SYN-5da02797|GRP-e3f28136|Settlement\d shivansh -> aabish|600.0|USR-9e19ac74|EXACT|Settlement|2026-04-29|USR-8ae8b889:600.0
+EXPENSE|SYN-94e60014|GRP-e3f28136|Settlement\d ab -> aabish|8000.0|USR-8ae8b889|EXACT|Settlement|2026-04-29|USR-f53e746d:8000.0
+EXPENSE|SYN-145fc394|GRP-e3f28136|Settlement\d shivansh -> aabish|400.0|USR-9e19ac74|EXACT|Settlement|2026-04-29|USR-8ae8b889:400.0
+EXPENSE|SYN-a94c6435|GRP-e3f28136|Settlement\d ab -> aabish|2000.0|USR-8ae8b889|EXACT|Settlement|2026-04-29|USR-f53e746d:2000.0
+EXPENSE|EXP-554e50e4|GRP-e3f28136|basic|2100.0|USR-8ae8b889|EQUAL|electricity|2026-04-29|USR-9e19ac74:700.0,USR-f53e746d:700.0,USR-8ae8b889:700.0
+EXPENSE|SYN-cac21a35|GRP-e3f28136|Settlement\d ab -> aabish|16000.0|USR-f53e746d|EXACT|Settlement|2026-04-29|USR-8ae8b889:16000.0
+BUDGET|BDG-96bcffaa|USR-f53e746d|h8yy|WEEKLY|50.0
+>>>>>>> 4b7c522 (Initial commit)
