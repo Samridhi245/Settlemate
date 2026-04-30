@@ -1,3 +1,5 @@
+//Structure of all the tables
+
 CREATE TABLE IF NOT EXISTS users (
     user_id TEXT PRIMARY KEY,
     name TEXT NOT NULL UNIQUE,
