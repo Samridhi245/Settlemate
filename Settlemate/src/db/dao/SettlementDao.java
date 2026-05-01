@@ -21,6 +21,7 @@ public class SettlementDao {
         try (Connection connection = databaseManager.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
             String now = LocalDateTime.now().toString();
+            
             for (SettlementTransaction settlement : settlements) {
                 statement.setString(1, groupId);
                 statement.setString(2, settlement.getFromUserId());
@@ -29,6 +30,7 @@ public class SettlementDao {
                 statement.setString(5, now);
                 statement.addBatch();
             }
+            
             statement.executeBatch();
         }
     }
