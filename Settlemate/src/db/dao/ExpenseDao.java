@@ -23,8 +23,10 @@ public class ExpenseDao {
 
         try (Connection connection = databaseManager.getConnection()) {
             connection.setAutoCommit(false);
+            
             try (PreparedStatement expenseStatement = connection.prepareStatement(expenseSql);
-                 PreparedStatement splitStatement = connection.prepareStatement(splitSql)) {
+                 
+                PreparedStatement splitStatement = connection.prepareStatement(splitSql)) {
                 expenseStatement.setString(1, expense.getExpenseId());
                 expenseStatement.setString(2, expense.getGroupId());
                 expenseStatement.setString(3, expense.getDescription());
@@ -51,6 +53,7 @@ public class ExpenseDao {
     }
 
     public void deleteById(String expenseId) throws SQLException {
+        
         try (Connection connection = databaseManager.getConnection();
              PreparedStatement statement = connection.prepareStatement("DELETE FROM expenses WHERE expense_id = ?")) {
             statement.setString(1, expenseId);
