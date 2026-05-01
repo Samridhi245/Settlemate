@@ -18,10 +18,9 @@ public class UserDao {
     }
 
     public void upsert(User user) throws SQLException {
-        String sql = "INSERT INTO users (user_id, name, email) VALUES (?, ?, ?) " +
-                "ON CONFLICT(user_id) DO UPDATE SET name=excluded.name, email=excluded.email";
+        String sql = "INSERT INTO users (user_id, name, email) VALUES (?, ?, ?) " + "ON CONFLICT(user_id) DO UPDATE SET name=excluded.name, email=excluded.email";
         try (Connection connection = databaseManager.getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql)) {
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, user.getUserId());
             statement.setString(2, user.getName());
             statement.setString(3, user.getEmail());
@@ -34,6 +33,7 @@ public class UserDao {
         try (Connection connection = databaseManager.getConnection();
              PreparedStatement statement = connection.prepareStatement("SELECT user_id, name, email FROM users");
              ResultSet rs = statement.executeQuery()) {
+            
             while (rs.next()) {
                 users.add(new User(rs.getString("user_id"), rs.getString("name"), rs.getString("email")));
             }
