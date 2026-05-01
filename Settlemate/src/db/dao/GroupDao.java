@@ -16,10 +16,12 @@ public class GroupDao {
     }
 
     public void upsert(Group group) throws SQLException {
+        
         String sql = "INSERT INTO groups (group_id, group_name) VALUES (?, ?) " +
                 "ON CONFLICT(group_id) DO UPDATE SET group_name=excluded.group_name";
         try (Connection connection = databaseManager.getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql)) {
+             
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, group.getGroupId());
             statement.setString(2, group.getGroupName());
             statement.executeUpdate();
@@ -28,6 +30,7 @@ public class GroupDao {
     }
 
     public void replaceMembers(String groupId, List<String> memberUserIds) throws SQLException {
+        
         try (Connection connection = databaseManager.getConnection()) {
             connection.setAutoCommit(false);
             try (PreparedStatement deleteStatement = connection.prepareStatement("DELETE FROM group_members WHERE group_id = ?");
@@ -47,6 +50,7 @@ public class GroupDao {
     }
 
     public void deleteById(String groupId) throws SQLException {
+        
         try (Connection connection = databaseManager.getConnection();
              PreparedStatement statement = connection.prepareStatement("DELETE FROM groups WHERE group_id = ?")) {
             statement.setString(1, groupId);
